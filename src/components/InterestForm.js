@@ -1,6 +1,5 @@
 import React from 'react';
-import { header, div, h1, form, input } from 'react-bootstrap';
-import '../assets/mdb.css'
+import { div, h1, form, input, Button } from 'react-bootstrap';
 
 export class InterestForm extends React.Component {
 
@@ -21,7 +20,7 @@ export class InterestForm extends React.Component {
                 </p>
 
                 <p className="mb-4 d-none d-md-block">
-                  <strong>The most comprehensive server for Grand Theft Auto 6. Loved by over 5000 users. Active Developers and Active Staff available. Create your own stunning story today.</strong>
+                  <strong>The most comprehensive server for Grand Theft Auto 6. Loved by over 5000 users. Active Developers and Active Staff available. Create your own stunning story today...</strong>
                 </p>
 
               </div>
@@ -53,7 +52,7 @@ export class InterestForm extends React.Component {
                       </div>
 
                       <div className="text-center">
-                        <button className="btn btn-indigo">Send</button>
+                        <Button className="btn btn-indigo" block>Send</Button>
                       </div>
 
                     </form>
