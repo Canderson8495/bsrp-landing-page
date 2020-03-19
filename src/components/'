@@ -93,7 +93,7 @@ export class InterestForm extends React.Component {
                       </div>
 
                       <div className="text-center">
-                        <Button type="submit" className="btn btn-indigo" disabled={this.isEmpty()} block>Send</Button>
+                        <Button type="submit" className="btn btn-indigo" disabled={this.isEmpty} block>Send</Button>
                       </div>
 
                     </form>
@@ -110,16 +110,13 @@ export class InterestForm extends React.Component {
       )
     }
     isEmpty(e){
-        if(!this.state.name || !this.state.email || !this.state.message){
-            return !this.validate(this.state.email);
+        console.log(this.state.name.length)
+        if(this.state.name.length === 0 || this.state.email.length === 0 || this.state.message.length === 0){
+            return true
         }else{
             return false
         }
     
-    }
-    validate = (email) => {
-        const expression = new RegExp('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$');
-        return expression.test(email);
     }
 }
 
